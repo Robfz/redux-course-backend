@@ -26,4 +26,4 @@ router.route('/transactions/:transactionId')
 
 api.use('/', router);
 
-api.listen(PORT, () => console.log(`API listening ${PORT}!`));
+api.listen(PORT, () => console.log(`API listening on port ${PORT}!`));
