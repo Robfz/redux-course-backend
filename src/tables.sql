@@ -1,0 +1,10 @@
+CREATE TABLE transactions (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  user VARCHAR(64) NOT NULL,
+  crypto VARCHAR(32) NOT NULL,
+  type VARCHAR(8) NOT NULL
+    CHECK (type IN ('buy', 'sell')),
+  amount DECIMAL(10, 2) NOT NULL,
+  price DECIMAL(10, 2) NOT NULL,
+  created DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
