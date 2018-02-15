@@ -18,3 +18,17 @@ Grant permissions to the new user:
 GRANT ALL PRIVILEGES ON cryptos.* TO 'redux'@'localhost';
 FLUSH PRIVILEGES;
 ```
+
+### Run project
+
+Install dependencies
+
+```
+yarn
+```
+
+Run project
+
+```
+node src/api.js
+```
