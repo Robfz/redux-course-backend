@@ -1,0 +1,11 @@
+{
+  "name": "react-course-backend",
+  "version": "1.0.0",
+  "main": "api.js",
+  "author": "Roberto Fierros <roberto@wizeline.com>",
+  "license": "MIT",
+  "private": null,
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
