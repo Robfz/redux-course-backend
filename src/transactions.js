@@ -1,13 +1,20 @@
 const mysql = require('mysql');
 
-const connection = mysql.createConnection({
+const DB_DONFIG = {
   host     : 'localhost',
   user     : 'redux',
   password : 'redux',
   database : 'cryptos',
-});
+};
 
 const ERROR_500 = { error: 'Internal server error' };
+
+const connection = mysql.createConnection(DB_DONFIG);
+
+// Keep connection alive
+setInterval(() => {
+  connection.query('SELECT 1');
+}, 5000);
 
 const getTransactions = (req, res) => {
   const { user } = req.query;
