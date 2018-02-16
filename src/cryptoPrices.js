@@ -16,7 +16,10 @@ const getCryptoPrices = (req, res) => {
     .then((response) => {
       const { data } = response;
 
-      res.json({ prices: getPrices(data) });
+      res.status(200).json({ prices: getPrices(data) });
+    })
+    .catch((err) => {
+      res.status(504).json({ error: 'Bitso no available' })
     });
 };
 
