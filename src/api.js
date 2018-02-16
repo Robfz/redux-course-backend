@@ -14,6 +14,9 @@ const router = express.Router();
 
 api.use(bodyParser.json());
 
+router.get('/')
+  .get((req, res) => res.status(200).send('Salu2'));
+
 router.route('/prices')
   .get(getCryptoPrices);
 
